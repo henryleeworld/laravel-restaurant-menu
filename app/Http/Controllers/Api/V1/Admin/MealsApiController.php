@@ -7,7 +7,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\StoreMealRequest;
 use App\Http\Requests\UpdateMealRequest;
 use App\Http\Resources\Admin\MealResource;
-use App\Meal;
+use App\Models\Meal;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;

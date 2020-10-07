@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
+use App\Models\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyMealRequest;
 use App\Http\Requests\StoreMealRequest;
 use App\Http\Requests\UpdateMealRequest;
-use App\Meal;
+use App\Models\Meal;
 use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

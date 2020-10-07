@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\Meal;
+use App\Models\Meal;
 
 class MealObserver
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -63,7 +63,7 @@ class Meal extends Model implements HasMedia
         return $file;
     }
 
-    public function saveQuietly()
+    public function saveQuietly(array $options = [])
     {
         return static::withoutEvents(function() {
             return $this->save();

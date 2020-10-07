@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::redirect('/', '/login');
 Route::get('/home', function () {
     if (session('status')) {
@@ -25,7 +26,7 @@ Route::get('/home', function () {
 Auth::routes(['register' => false]);
 // Admin
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
@@ -51,10 +52,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('meals/reorder', 'MealsController@reorder')->name('meals.reorder');
     Route::resource('meals', 'MealsController');
 });
-Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'App\Http\Controllers\Auth', 'middleware' => ['auth']], function () {
 // Change password
     if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
         Route::get('password', 'ChangePasswordController@edit')->name('password.edit');
         Route::post('password', 'ChangePasswordController@update')->name('password.update');
     }
 });
+

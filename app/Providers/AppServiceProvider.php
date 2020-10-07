@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use App\Category;
-use App\Meal;
+use App\Models\Category;
+use App\Models\Meal;
 use App\Observers\CategoryObserver;
 use App\Observers\MealObserver;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {

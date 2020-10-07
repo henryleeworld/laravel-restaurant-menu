@@ -1,16 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
+use DateTimeInterface;
 
-class Category extends Model
+class Permission extends Model
 {
     use SoftDeletes;
 
-    public $table = 'categories';
+    public $table = 'permissions';
 
     protected $dates = [
         'created_at',
@@ -19,8 +19,7 @@ class Category extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'position',
+        'title',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -29,17 +28,5 @@ class Category extends Model
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-    }
-
-    public function meals()
-    {
-        return $this->hasMany(Meal::class)->orderBy('position', 'asc');
-    }
-
-    public function saveQuietly()
-    {
-        return static::withoutEvents(function() {
-            return $this->save();
-        });
     }
 }

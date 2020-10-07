@@ -1,6 +1,8 @@
 <?php
 
-use App\Meal;
+namespace Database\Seeders;
+
+use App\Models\Meal;
 use Illuminate\Database\Seeder;
 
 class MealsTableSeeder extends Seeder
