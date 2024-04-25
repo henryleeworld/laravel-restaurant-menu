@@ -1,4 +1,4 @@
-# Laravel 9 餐廳菜單
+# Laravel 10 餐廳菜單
 
 一份完整的菜單內容，應先掌握菜單的種類和結構，將菜單品項依食性和飲食順序等詳加分類，並善用編排技巧，引導消費者點選擁有較高利潤的餐點。
 
@@ -20,14 +20,18 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行 __Artisan__ 指令的 __storage:link__ 來建立連結符號，讓公用可存取的檔案維持在一個目錄中。
+```sh
+$ php artisan storage:link
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/o1nQ6Sy.png)
+![](https://i.imgur.com/SNBtWV1.png)
 > 現代西式分類細分可分為開胃菜、湯、副菜、雪酪、主菜、主食、沙拉、點心、飲料
 
-![](https://i.imgur.com/lQSuRZF.png)
+![](https://i.imgur.com/Dt6TvTH.png)
 > 菜單中的固定餐點可以節省成本、縮短餐點的製作時間；而在有限選項的餐點內容上，則可以提供消費者依個人喜好來挑選餐點
