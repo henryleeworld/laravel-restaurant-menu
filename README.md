@@ -30,8 +30,8 @@ $ php artisan storage:link
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/SNBtWV1.png)
+![](https://i.imgur.com/bWXmVTR.png)
 > 現代西式分類細分可分為開胃菜、湯、副菜、雪酪、主菜、主食、沙拉、點心、飲料
 
-![](https://i.imgur.com/Dt6TvTH.png)
+![](https://i.imgur.com/SG87iGC.png)
 > 菜單中的固定餐點可以節省成本、縮短餐點的製作時間；而在有限選項的餐點內容上，則可以提供消費者依個人喜好來挑選餐點
